@@ -1,11 +1,20 @@
 import React, { Component } from 'react';
 
-
-
 //define a new class SearchBar and give it access to all functionality that React.Component has
 class SearchBar extends Component {
+  constructor(props) {
+    super(props)
+    this.state = { term: '' };
+  }
+
   render() {
-    return <input />;
+    return (
+      <div>
+        <input
+          value={ this.state.term }
+          onChange={ event => this.setState({ term: event.target.value }) } />
+      </div>
+    );
   }
 }
 
