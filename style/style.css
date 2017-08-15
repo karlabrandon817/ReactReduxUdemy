@@ -25,3 +25,7 @@
 .list-group-item:hover{
   background-color: #eee;
 }
+
+input:focus::-webkit-input-placeholder{
+  color: transparent;
+}
